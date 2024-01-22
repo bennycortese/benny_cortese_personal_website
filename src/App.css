@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App {
   text-align: center;
 }
@@ -35,4 +39,11 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.navbar .menu-horizontal .details[open] .p-2 {
+    position: absolute; /* Positions dropdown content absolutely relative to its positioned parent */
+    z-index: 10; /* Ensures dropdown content is above other content */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds some shadow for better visibility */
+    width: max-content; /* Ensures the dropdown width is based on its content */
 }

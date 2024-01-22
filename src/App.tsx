@@ -1,10 +1,26 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App_output.css';
 
 function App() {
   return (
+    
+    
     <div className="App">
+
+    <div className="navbar bg-base-100">
+        <div className="flex-1">
+            <a className="btn btn-ghost text-xl">Benny Cortese</a>
+        </div>
+        <div className="flex-none">
+            <ul className="menu menu-horizontal px-1">
+                <li><a>Projects</a></li>
+                <li><a>Resume</a></li>
+                <li><a>About Me</a></li>
+            </ul>
+        </div>
+    </div>
+
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -20,6 +36,7 @@ function App() {
         </a>
       </header>
     </div>
+
   );
 }
 
