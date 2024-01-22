@@ -25,3 +25,4 @@ yarn-error.log*
 # output files
 /src/App_output.css
 /src/index_output.css
+/src/benny_art/*
