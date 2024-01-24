@@ -56,10 +56,7 @@ const QuickNotes: React.FC = () => {
           <li key={note.name}>{note.name}</li>
         ))}
       </ul>
-
-      <input type="text" placeholder="Type here" className="input input-bordered input-info w-full max-w-xs" />
       
-      <input type="submit" value="Submit" className="btn" />
 
       <input
         type="text"
@@ -67,7 +64,8 @@ const QuickNotes: React.FC = () => {
         onChange={(e) => setNoteName(e.target.value)}
         placeholder="Note"
       />
-      <button onClick={handleInsert}>Insert a Note</button>
+      
+      <input onClick={handleInsert} type="submit" value="Insert a Note" className="btn" />
 
     </div>
     
