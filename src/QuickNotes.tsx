@@ -3,36 +3,36 @@ import { createClient } from "@supabase/supabase-js";
 
 const supabase = createClient("https://czptjemnwhgrjdiykjzg.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN6cHRqZW1ud2hncmpkaXlranpnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDYwODAwNzYsImV4cCI6MjAyMTY1NjA3Nn0.De3wrVx-xxkSfLNBBnOWlhqr8UL2zZFMJmoUH06yGUc");
 
-type Country = {
+type Note = {
     name: string; // Add other properties as needed
   };
 
 const QuickNotes: React.FC = () => {
 
-    const [countries, setCountries] = useState<Country[]>([]);
+    const [benny_notes, setBennyNotes] = useState<Note[]>([]);
 
   useEffect(() => {
-    getCountries();
+    getNotes();
   }, []);
 
 
-  async function getCountries() {
-    const { data } = await supabase.from("countries").select();
+  async function getNotes() {
+    const { data } = await supabase.from("benny_notes").select();
     if (data) {
-      setCountries(data);
+        setBennyNotes(data);
     } else {
-      setCountries([]);
+        setBennyNotes([]);
     }
   }
 
   
-    const [countryName, setCountryName] = useState('');
+    const [noteName, setNoteName] = useState('');
   
     const handleInsert = async () => {
       const { data, error } = await supabase
-        .from('countries')
+        .from('benny_notes')
         .insert([
-          { name: countryName },
+          { name: noteName },
         ]);
   
       if (error) {
@@ -40,8 +40,8 @@ const QuickNotes: React.FC = () => {
       } else {
         console.log('Data inserted successfully', data);
         // Optionally reset the input field or provide further user feedback
-        setCountryName('');
-        getCountries(); // let's me rerender this if the note gets put in the database successfully. 
+        setNoteName('');
+        getNotes(); // let's me rerender this if the note gets put in the database successfully. 
       }
 
     };
@@ -52,8 +52,8 @@ const QuickNotes: React.FC = () => {
       <h1 className="text-2xl font-bold mb-4">Quick Notes!</h1>
 
       <ul>
-        {countries.map((country) => (
-          <li key={country.name}>{country.name}</li>
+        {benny_notes.map((note) => (
+          <li key={note.name}>{note.name}</li>
         ))}
       </ul>
 
@@ -63,8 +63,8 @@ const QuickNotes: React.FC = () => {
 
       <input
         type="text"
-        value={countryName}
-        onChange={(e) => setCountryName(e.target.value)}
+        value={noteName}
+        onChange={(e) => setNoteName(e.target.value)}
         placeholder="Note"
       />
       <button onClick={handleInsert}>Insert a Note</button>
