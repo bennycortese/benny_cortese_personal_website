@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.avatar {
+.btn {
     padding-right: 20px;
     padding-left: 20px;
   }
