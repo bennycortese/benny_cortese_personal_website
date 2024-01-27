@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { createClient } from "@supabase/supabase-js";
+import './QuickNotes_output.css';
 
 const supabase = createClient("https://czptjemnwhgrjdiykjzg.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN6cHRqZW1ud2hncmpkaXlranpnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDYwODAwNzYsImV4cCI6MjAyMTY1NjA3Nn0.De3wrVx-xxkSfLNBBnOWlhqr8UL2zZFMJmoUH06yGUc");
 
@@ -64,8 +65,8 @@ const QuickNotes: React.FC = () => {
         onChange={(e) => setNoteName(e.target.value)}
         placeholder="Note"
       />
-      
-      <input onClick={handleInsert} type="submit" value="Insert a Note" className="btn" />
+
+      <input onClick={handleInsert} type="submit" value="Insert a Note! " className="btn" />
 
     </div>
     

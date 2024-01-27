@@ -18,7 +18,7 @@ const Home: React.FC = () => (
 const App: React.FC = () => {
     return (
       <Router>
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-blue-500 text-white">
           <div className="flex-1">
             <Link to="/" className="btn btn-ghost text-xl">Benny Cortese</Link>
           </div>

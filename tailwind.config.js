@@ -2,7 +2,11 @@
 module.exports = {
     content: ["./src/**/*.{js,jsx,ts,tsx}"],
     theme: {
-      extend: {},
+      extend: {
+        colors: {
+            offWhite: '#FAF9F6',
+          },
+      },
     },
     plugins: [require("daisyui")],
   }
