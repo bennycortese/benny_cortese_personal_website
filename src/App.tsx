@@ -4,10 +4,10 @@ import logo from './logo.svg';
 import './App_output.css';
 import AboutMe from './AboutMe';
 import QuickNotes from './QuickNotes';
+import Resume from './Resume';
 
 // Placeholder components for demonstration
 const Projects: React.FC = () => <div><h1>Projects Page</h1></div>;
-const Resume: React.FC = () => <div><h1>Resume Page</h1></div>;
 const Home: React.FC = () => (
   <header className="App-header">
     <img src={logo} className="App-logo" alt="logo" />
