@@ -54,7 +54,15 @@ const QuickNotes: React.FC = () => {
 
       <ul>
         {benny_notes.map((note) => (
-          <li key={note.name}>{note.name}</li>
+           <li key={note.name}>
+           <button 
+             type="button"
+             className="btn btn-primary m-2"
+             onClick={() => {/* handle click */}}
+           >
+             {note.name}
+           </button>
+           </li>
         ))}
       </ul>
       
