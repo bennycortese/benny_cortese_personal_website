@@ -15,4 +15,4 @@ const FrenchStory: React.FC = () => {
   );
 }
 
-export default Resume;
+export default FrenchStory;
