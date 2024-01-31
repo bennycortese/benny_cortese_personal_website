@@ -52,8 +52,44 @@ const QuickNotes: React.FC = () => {
     <div style={{ backgroundColor: '#FAF9F6' }} className="flex flex-col items-center justify-center min-h-screen">
       <h1 className="text-2xl font-bold mb-4">Quick Notes!</h1>
 
+      <div className="overflow-x-auto">
+  <table className="table">
+    {/* head */}
+    <thead>
+      <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Job</th>
+        <th>Favorite Color</th>
+      </tr>
+    </thead>
+    <tbody>
+      {/* row 1 */}
+      <tr className="bg-base-200">
+        <th>1</th>
+        <td>Cy Ganderton</td>
+        <td>Quality Control Specialist</td>
+        <td>Blue</td>
+      </tr>
+      {/* row 2 */}
+      <tr>
+        <th>2</th>
+        <td>Hart Hagerty</td>
+        <td>Desktop Support Technician</td>
+        <td>Purple</td>
+      </tr>
+      {/* row 3 */}
+      <tr>
+        <th>3</th>
+        <td>Brice Swyre</td>
+        <td>Tax Accountant</td>
+        <td>Red</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
       <ul>
-        {benny_notes.map((note) => (
+        {benny_notes.map((note) => ( // I realllllly don't like this format, need to figure something else out
            <li key={note.name}>
            <button 
              type="button"
@@ -65,6 +101,7 @@ const QuickNotes: React.FC = () => {
            </li>
         ))}
       </ul>
+      
       
 
       <input
