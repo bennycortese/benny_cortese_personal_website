@@ -8,8 +8,14 @@ import pearls_rat from './benny_art/pearls_rat1.png';
 import snoopy from './benny_art/snoopy1.png';
 import voltorb from './benny_art/voltorb1.png';
 
+// need to fix typescript issues, but hopefully can fix this and then dump all my art here
+const images = require.context('./benny_art', true);
+const imageList = images.keys().map(image => images(image));
+
 const AboutMe: React.FC = () => {
 const [currentImage, setCurrentImage] = useState<string>(blastoise); // Default to the first image
+
+const all_images = images;
 
   return (
     
