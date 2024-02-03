@@ -12,6 +12,9 @@ import voltorb from './benny_art/voltorb1.png';
 const images = require.context('./benny_art', true);
 const imageList = images.keys().map(image => images(image));
 
+// for image in imageList: 
+// <li><a onClick={() => setCurrentImage(image)}>image.name</a></li>
+
 const AboutMe: React.FC = () => {
 const [currentImage, setCurrentImage] = useState<string>(blastoise); // Default to the first image
 
