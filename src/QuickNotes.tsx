@@ -91,13 +91,13 @@ const QuickNotes: React.FC = () => {
       <ul>
         {benny_notes.map((note) => ( // I realllllly don't like this format, need to figure something else out
            <li key={note.name}>
-           <button 
-             type="button"
+           <text
+             type="text"
              className="btn btn-primary m-2"
              onClick={() => {/* handle click */}}
            >
              {note.name}
-           </button>
+           </text>
            </li>
         ))}
       </ul>
