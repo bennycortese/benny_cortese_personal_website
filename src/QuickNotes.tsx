@@ -93,7 +93,7 @@ const QuickNotes: React.FC = () => {
            <li key={note.name}>
            <text
              type="text"
-             className="btn btn-primary m-2"
+             className="text-lg font-medium leading-relaxed tracking-normal text-gray-600 mt-4"
              onClick={() => {/* handle click */}}
            >
              {note.name}
