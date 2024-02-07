@@ -66,41 +66,27 @@ const QuickNotes: React.FC = () => {
     <tbody>
       {/* row 1 */}
       <tr className="bg-base-200">
-        <th>1</th>
-        <td>Cy Ganderton</td>
-        <td>Quality Control Specialist</td>
-        <td>Blue</td>
-      </tr>
-      {/* row 2 */}
-      <tr>
-        <th>2</th>
-        <td>Hart Hagerty</td>
-        <td>Desktop Support Technician</td>
-        <td>Purple</td>
-      </tr>
-      {/* row 3 */}
-      <tr>
-        <th>3</th>
-        <td>Brice Swyre</td>
-        <td>Tax Accountant</td>
-        <td>Red</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-      <ul>
         {benny_notes.map((note) => ( // I realllllly don't like this format, need to figure something else out
            <li key={note.name}>
-           <text
-             type="text"
+           <tr
              className="text-lg font-medium leading-relaxed tracking-normal text-gray-600 mt-4"
              onClick={() => {/* handle click */}}
            >
              {note.name}
-           </text>
+           </tr>
            </li>
         ))}
-      </ul>
+        </tr>
+      {/* row 2 */}
+      <tr>
+      </tr>
+      {/* row 3 */}
+      <tr>
+        <th>3</th>
+      </tr>
+    </tbody>
+  </table>
+</div>
       
       
 
