@@ -1,9 +1,9 @@
 import './doodles_output.css';
 import React, { useState } from 'react';
-import * as images from './art_index'; // Import all images from art_index.tsx
+import images from './art_index'; // Import all images from art_index.tsx
 
 const AboutMe: React.FC = () => {
-  const [currentImage, setCurrentImage] = useState<string>(imagesblastoise); // Default to the first image
+  const [currentImage, setCurrentImage] = useState<string>(images.blastoise); // Default to the first image
 
   const imageNames = [
     'Blastoise',
@@ -14,6 +14,10 @@ const AboutMe: React.FC = () => {
     'Snoopy',
     'Voltorb',
   ];
+
+  interface Images {
+    [key: string]: ImageType;
+  }
 
   const handleImageChange = (imagePath: string) => {
     setCurrentImage(imagePath);
