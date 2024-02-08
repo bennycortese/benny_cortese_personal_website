@@ -1,5 +1,17 @@
 
 import React, {useState} from 'react';
+import { ChatGPTAPI } from 'chatgpt'
+
+
+async function example() {
+    const api = new ChatGPTAPI({
+      //apiKey: process.env.OPENAI_API_KEY
+      apiKey: "hi"
+    })
+  
+    const res = await api.sendMessage('Hello World!')
+    console.log(res.text)
+  }
 
 const FrenchStory: React.FC = () => {
 

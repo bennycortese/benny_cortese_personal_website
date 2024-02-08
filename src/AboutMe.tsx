@@ -15,9 +15,7 @@ const AboutMe: React.FC = () => {
     'Voltorb',
   ];
 
-  interface Images {
-    [key: string]: ImageType;
-  }
+  
 
   const handleImageChange = (imagePath: string) => {
     setCurrentImage(imagePath);

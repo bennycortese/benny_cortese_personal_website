@@ -1,4 +1,4 @@
-// benny_art/index.ts
+// art_index.tsx
 import blastoise from './blastoise1.png';
 import bart_simpson from './bart_simpson1.png';
 import gumball from './gumball1.png';
