@@ -37,7 +37,7 @@ const QuickNotes: React.FC = () => {
     if (error) {
       console.error('There was an error inserting the data', error);
     } else {
-      console.log('Data inserted successfully', data);
+      console.log('Data inserted successfully!', data);
       setKey('');
       setValue('');
       getNotes(); // To refresh the notes list

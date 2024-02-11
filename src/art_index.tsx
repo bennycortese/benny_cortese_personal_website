@@ -6,7 +6,7 @@ import jack_skellington from './jack_skellington1.png';
 import pearls_rat from './pearls_rat1.png';
 import snoopy from './snoopy1.png';
 import voltorb from './voltorb1.png';
-
+// figure out why this is broken
 export default {
   blastoise,
   bart_simpson,
