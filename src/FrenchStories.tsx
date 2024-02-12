@@ -1,33 +1,54 @@
-import React, { useState, useEffect } from 'react';
-import { ChatGPTAPI } from 'chatgpt'
+import React, { useState } from 'react';
+import OpenAI from "openai";
 
-const FrenchStory: React.FC = () => {
-  const [result, setResult] = useState<string>(''); // Initialize state for storing the result
+const apiKey = process.env.REACT_APP_OPENAI_API_KEY || (() => {
+  throw new Error('REACT_APP_OPENAI_API_KEY is not defined');
+})();
 
-  useEffect(() => {
-    async function fetchData() {
-      const api = new ChatGPTAPI({
-        //apiKey: process.env.OPENAI_API_KEY
-        apiKey: "hi"
-      })
+const openai = new OpenAI({ apiKey, dangerouslyAllowBrowser: true });
 
-      const res = await api.sendMessage('Hello World!');
-      setResult(res.text); // Set the result in the state
+const ChatExample = () => {
+  const [result, setResult] = useState<string>('');
+  const [query, setQuery] = useState<string>('');
+
+  const handleFetchData = async () => {
+    try {
+      const completion = await openai.chat.completions.create({
+        messages: [
+          { "role": "system", "content": "Vous êtes un assistant utile qui rendra une histoire en français à l'utilisateur" },
+          { "role": "user", "content": query }
+        ],
+        model: "gpt-3.5-turbo",
+      });
+
+      if (completion.choices && completion.choices.length > 0) {
+        setResult(completion.choices[0]?.message?.content ?? "No content available.");
+      }
+    } catch (error) {
+      console.error("Error fetching data from OpenAI:", error);
+      setResult("Failed to fetch response.");
     }
-
-    fetchData(); // Call the function to fetch data when the component mounts
-  }, []); // Empty dependency array ensures the effect runs only once after the initial render
+  };
 
   return (
-    <div style={{ backgroundColor: '#FAF9F6' }} className="flex flex-col items-center justify-center min-h-screen">
-      <h1 className="text-2xl font-bold mb-4">Hello! These are some of my favorite french stories</h1>
+    <div>
+      <h1>Ask ChatGPT</h1>
+      <input
+        type="text"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        placeholder="Ask a question..."
+        className="input input-bordered w-full max-w-xs"
+      />
+      <button onClick={handleFetchData} className="btn mt-2">
+        Submit
+      </button>
       <div>
-        <h1 className="text-2xl font-bold mb-4">Stories: </h1>
-        <h1 className="text-2xl font-bold mb-4">{result}</h1> {/* Display the result */}
+        <h2>Response:</h2>
+        <p>{result}</p>
       </div>
     </div>
-    //download button here
   );
 }
 
-export default FrenchStory;
+export default ChatExample;
