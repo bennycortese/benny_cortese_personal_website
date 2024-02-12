@@ -92,14 +92,6 @@ const QuickNotes: React.FC = () => {
           <p>{retrievedNote.id}: {retrievedNote.name}</p>
         </div>
       )}
-
-      <ul>
-        {notes.map((note) => (
-          <li key={note.id}>
-            {note.id}: {note.name}
-          </li>
-        ))}
-      </ul>
     </div>
   );
 };
