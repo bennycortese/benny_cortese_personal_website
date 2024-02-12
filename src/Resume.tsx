@@ -1,19 +1,17 @@
-
-import React, {useState} from 'react';
-//import { Document, Page } from 'react-pdf';
-//import PDFViewer from './PDFViewer';
+import React, { useState } from 'react';
 
 const Resume: React.FC = () => {
+  const [numPages, setNumPages] = useState<number | null>(null);
+
+  function onDocumentLoadSuccess({ numPages }: { numPages: number }) {
+    setNumPages(numPages);
+  }
 
   return (
-    
-    <div style={{ backgroundColor: '#FAF9F6' }} className="flex flex-col items-center justify-center min-h-screen">
+    <div style={{ backgroundColor: '#FAF9F6' }} className="flex flex-col items-center justify-start min-h-screen">
       <h1 className="text-2xl font-bold mb-4">Hello! My name is Benny Cortese. This is my Resume!</h1>
-      <div>
-        
-      </div>
+      <embed src="./assets/resume_2_2_2024.pdf" type="application/pdf" width="800" height="800" />
     </div>
-    //download button here
   );
 }
 
