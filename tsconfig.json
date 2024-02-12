@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-  ]
+, "need_backend/FrenchStories.tsx"  ]
 }

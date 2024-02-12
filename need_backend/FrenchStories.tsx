@@ -32,7 +32,7 @@ const ChatExample = () => {
 
   return (
     <div>
-      <h1>Ask ChatGPT</h1>
+      <h1>French Story Generator</h1>
       <input
         type="text"
         value={query}

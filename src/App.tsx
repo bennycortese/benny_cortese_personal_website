@@ -5,7 +5,7 @@ import './App_output.css';
 import AboutMe from './AboutMe';
 import QuickNotes from './QuickNotes';
 import Resume from './Resume';
-import FrenchStory from './FrenchStories';
+import FrenchStory from '../need_backend/FrenchStories';
 
 // Placeholder components for demonstration
 const Projects: React.FC = () => <div><h1>Projects Page</h1></div>;
@@ -29,7 +29,6 @@ const App: React.FC = () => {
               <li><Link to="/resume">Resume</Link></li>
               <li><Link to="/aboutme">About Me</Link></li> {/* Ensure URL is lowercase */}
               <li><Link to="/quicknotes">Quick Notes</Link></li> {/* Ensure URL is lowercase */}
-              <li><Link to="/frenchstories">French Stories</Link></li> {/* Ensure URL is lowercase */}
             </ul>
           </div>
         </div>
@@ -41,7 +40,6 @@ const App: React.FC = () => {
           <Route path="/resume" element={<Resume />} />
           <Route path="/aboutme" element={<AboutMe />} /> {/* Ensure URL is lowercase */}
           <Route path="/quicknotes" element={<QuickNotes />} /> 
-          <Route path="/frenchstories" element={<FrenchStory />} /> 
         </Routes>
       </Router>
     );
