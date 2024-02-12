@@ -29,21 +29,51 @@ const QuickNotes: React.FC = () => {
     }
   }
 
-  const handleInsert = async () => {
-    const { data, error } = await supabase
-      .from('benny_notes')
-      .insert([
-        { id: key, name: value },
-      ]);
+  const handleInsertOrUpdate = async () => {
+    // Step 1: Check if the note with the given key exists
+    const { data: existingNote, error: fetchError } = await supabase
+        .from('benny_notes')
+        .select()
+        .eq('id', key)
+        .single();
 
-    if (error) {
-      console.error('There was an error inserting the data', error);
+      /*if (!fetchError && !existingNote) {
+        console.error('Error checking for existing note', fetchError);
+        return; // Stop execution if there's an error and no existing note is found
+      }*/
+  
+    if (existingNote) {
+      // Step 2: Append to the existing note's value
+      const appendedValue = existingNote.name + ',' + value; // Append the new value to the existing value
+      const { error: updateError } = await supabase
+        .from('benny_notes')
+        .update({ name: appendedValue })
+        .eq('id', key);
+  
+      if (updateError) {
+        console.error('Error updating the note', updateError);
+      } else {
+        console.log('Note updated successfully with appended value');
+      }
     } else {
-      console.log('Data inserted successfully!', data);
-      setKey('');
-      setValue('');
-      getNotes(); // To refresh the notes list
+      // Step 3: Insert a new note if it does not exist
+      const { data, error: insertError } = await supabase
+        .from('benny_notes')
+        .insert([
+          { id: key, name: value },
+        ]);
+  
+      if (insertError) {
+        console.error('There was an error inserting the new note', insertError);
+      } else {
+        console.log('New note inserted successfully', data);
+      }
     }
+  
+    // Reset input fields and refresh notes list
+    setKey('');
+    setValue('');
+    getNotes();
   };
 
   const handleRetrieve = async () => {
@@ -62,37 +92,67 @@ const QuickNotes: React.FC = () => {
   };
 
   return (
-    <div style={{ backgroundColor: '#FAF9F6' }} className="flex flex-col items-center justify-center min-h-screen">
-      <h1 className="text-2xl font-bold mb-4">Quick Notes!</h1>
-      <input
+    <div style={{ backgroundColor: '#FAF9F6' }} className="flex flex-col items-center justify-center min-h-screen p-4">
+  <h1 className="text-4xl font-bold mb-8">Quick Notes!</h1>
+  
+  <div className="form-control mb-4">
+    <label className="label">
+        <span className="label-text"></span>
+    </label>
+    <input
         type="text"
         value={key}
         onChange={(e) => setKey(e.target.value)}
         placeholder="Key"
-      />
-      <input
+        className="input input-bordered w-full"
+    />
+  </div>
+
+  <div className="form-control mb-4">
+    <label className="label">
+        <span className="label-text"></span>
+    </label>
+    <input
         type="text"
         value={value}
         onChange={(e) => setValue(e.target.value)}
         placeholder="Value"
-      />
-      <button onClick={handleInsert} className="btn">Insert a Note</button>
+        className="input input-bordered w-full"
+    />
+  </div>
 
-      <input
+  <button onClick={handleInsertOrUpdate} className="btn btn-primary mb-4">Insert a Note</button>
+
+  <div className="form-control mb-4">
+    <label className="label">
+        <span className="label-text"></span>
+    </label>
+    <input
         type="text"
         value={retrieveKey}
         onChange={(e) => setRetrieveKey(e.target.value)}
         placeholder="Key to Retrieve"
-      />
-      <button onClick={handleRetrieve} className="btn">Retrieve a Note</button>
+        className="input input-bordered w-full"
+    />
+  </div>
 
-      {retrievedNote && (
-        <div>
-          <h2>Retrieved Note:</h2>
-          <p>{retrievedNote.id}: {retrievedNote.name}</p>
-        </div>
-      )}
+  <button onClick={handleRetrieve} className="btn btn-secondary mb-8">Retrieve a Note</button>
+
+  {retrievedNote && (
+  <div className="mt-8 p-4 bg-base-100 shadow-lg rounded-lg">
+    <div className="flex items-center mb-4">
+      <h2 className="text-xl font-bold">Retrieved Note</h2>
     </div>
+    <div className="border-t pt-2">
+      <p className="font-semibold">{retrievedNote.id}</p>
+    </div>
+    <div className="border-t pt-2 mt-2">
+      <p className="text-lg">{retrievedNote.name}</p>
+    </div>
+  </div>
+)}
+</div>
+
   );
 };
 
