@@ -10,6 +10,15 @@ const AboutMe: React.FC = () => {
         <p className="text-xl mt-2">Incoming Software Engineer Intern at Figma, passionate about building scalable software solutions and contributing to open source.</p>
       </div>
 
+      <div className="card card-bordered w-96 shadow-xl bg-[#FAF9F6]">
+        <figure className="bg-[#FAF9F6] p-4">
+        <img src="./assets/benny_cortese_self.jpg" alt="Benny Cortese Image Here (Bugged Out)" className="rounded-lg w-128 h-128 object-cover bg-[#FAF9F6]"></img>
+        </figure> 
+    </div>
+
+
+
+
       {/* Professional Experience Section */}
       <div className="my-10">
         <h2 className="text-2xl font-bold text-center mb-5">Professional Experience</h2>
