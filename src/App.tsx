@@ -4,7 +4,6 @@ import logo from './logo.svg';
 import './App_output.css';
 import Drawings from './Drawings';
 import QuickNotes from './QuickNotes';
-import Resume from './Resume';
 import AboutMe from './AboutMe'
 //import FrenchStory from '../need_backend/FrenchStories';
 
@@ -26,7 +25,6 @@ const App: React.FC = () => {
           <div className="flex-none">
             <ul className="menu menu-horizontal px-1">
               <li><Link to="/aboutme">About Me</Link></li>
-              <li><Link to="/resume">Resume</Link></li>
               <li><Link to="/drawings">Drawings</Link></li> {/* Ensure URL is lowercase */}
               <li><Link to="/quicknotes">Quick Notes</Link></li> {/* Ensure URL is lowercase */}
             </ul>
@@ -37,7 +35,6 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/aboutme" element={<AboutMe />} />
-          <Route path="/resume" element={<Resume />} />
           <Route path="/drawings" element={<Drawings />} /> {/* Ensure URL is lowercase */}
           <Route path="/quicknotes" element={<QuickNotes />} /> 
         </Routes>
