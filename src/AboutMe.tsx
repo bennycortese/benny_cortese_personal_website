@@ -48,9 +48,11 @@ const AboutMe: React.FC = () => {
       </div>
 
 
-      <button
+      <a
+  href="https://www.linkedin.com/in/benny-cortese/"
+  target="_blank"
   className="group hover:bg-sky-600 relative bg-sky-700 rounded text-neutral-50 duration-500 font-bold flex justify-start gap-2 items-center p-2 pr-6"
-  onClick={() => window.location.href = 'https://www.linkedin.com/in/benny-cortese/'}
+  style={{ textDecoration: 'none' }}
 >
   <svg
     className="w-8 h-8 fill-neutral-50"
@@ -72,7 +74,7 @@ const AboutMe: React.FC = () => {
   >
     See my profile!
   </div>
-</button>
+</a>
     </div>
     
   );
