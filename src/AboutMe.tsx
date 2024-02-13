@@ -21,6 +21,7 @@ const AboutMe: React.FC = () => {
         </ul>
       </div>
 
+
       {/* Skills Section */}
       <div className="my-10">
         <h2 className="text-2xl font-bold text-center mb-5">Skills</h2>
@@ -72,8 +73,6 @@ const AboutMe: React.FC = () => {
     See my profile!
   </div>
 </button>
-
-
     </div>
     
   );
