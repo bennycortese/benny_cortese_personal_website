@@ -6,3 +6,9 @@
     width: 100px; /* or any size you prefer */
     height: auto;
   }
+
+  html, body {
+    background-color: #FAF9F6; /* Use your chosen color */
+    min-height: 100%;
+  }
+  

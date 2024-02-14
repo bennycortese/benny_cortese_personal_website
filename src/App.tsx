@@ -7,7 +7,7 @@ import AboutMe from './AboutMe'
 //import FrenchStory from '../need_backend/FrenchStories';
 
 const Home: React.FC = () => (
-  <header className="App-header">
+  <header className="App-header bg-[#FAF9F6] min-h-screen">
     <p>Hello! I am Benny Cortese! Welcome to my Shenanigans!</p>
   </header>
 );
