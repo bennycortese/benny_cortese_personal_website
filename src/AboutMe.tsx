@@ -7,12 +7,12 @@ const AboutMe: React.FC = () => {
       {/* Introduction Section */}
       <div className="text-center">
         <h1 className="text-3xl font-bold">Hi, I'm Benjamin (Benny) Cortese</h1>
-        <p className="text-xl mt-2">Incoming Software Engineer Intern at Figma, passionate about building scalable software solutions and contributing to open source.</p>
+        <p className="text-xl mt-2">Incoming Software Engineer Intern at Figma, passionate about building awesome things with technology!</p>
       </div>
 
       <div className="card card-bordered w-96 shadow-xl bg-[#FAF9F6]">
         <figure className="bg-[#FAF9F6] p-4">
-        <img src="./assets/benny_cortese_self.jpg" alt="Benny Cortese Image Here (Bugged Out)" className="rounded-lg w-128 h-128 object-cover bg-[#FAF9F6]"></img>
+        <img src="./assets/benny_cortese_self.jpg" alt="Benny Cortese" className="rounded-lg w-128 h-128 object-cover bg-[#FAF9F6]"></img>
         </figure> 
     </div>
 
@@ -23,24 +23,26 @@ const AboutMe: React.FC = () => {
       <div className="my-10">
         <h2 className="text-2xl font-bold text-center mb-5">Professional Experience</h2>
         <ul className="list-disc pl-5">
-          <li>Software Engineer Intern at Figma (Oct 2023 - Present)</li>
+          <li>Incoming Software Engineering Intern at Figma (May 2024 - August 2024)</li>
           <li>Neo Scholar Finalist (Jul 2023 - Present)</li>
-          <li>Software Engineer Intern at Microsoft (May 2023 - Aug 2023 & May 2022 - Aug 2022)</li>
-          <li>Undergraduate Teaching Assistant at UF (Various Courses, Aug 2021 - Present)</li>
+          <li>Software Engineer Intern at Microsoft working on Kubernetes related projects (May 2023 - Aug 2023 and May 2022 - Aug 2022)</li>
+          <li>Teaching Assistant at UF for Data Structures, OS, Discrete Structures, and Programming Language Concepts (Aug 2021 - Present)</li>
         </ul>
       </div>
 
 
+
       {/* Skills Section */}
-      <div className="my-10">
+      <div className="my-12">
         <h2 className="text-2xl font-bold text-center mb-5">Skills</h2>
         <div className="grid grid-cols-3 gap-4 text-center">
-          <div className="badge badge-outline">C++</div>
-          <div className="badge badge-outline">JavaScript</div>
-          <div className="badge badge-outline">React</div>
-          <div className="badge badge-outline">Go</div>
-          <div className="badge badge-outline">Kubernetes</div>
-          <div className="badge badge-outline">Python</div>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="C++" className="skill-icon"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" className="skill-icon"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="Javascript" className="skill-icon"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg" alt="Go" className="skill-icon"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" className="skill-icon"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg" alt="Kubernetes" className="skill-icon"/>
+          
         </div>
       </div>
 
@@ -49,10 +51,10 @@ const AboutMe: React.FC = () => {
         <h2 className="text-2xl font-bold text-center mb-5">Education & Awards</h2>
         <p>Bachelor of Science in Computer Science and Mathematics, University of Florida (2020 - 2024) - GPA: 3.97/4.0</p>
         <ul className="list-disc pl-5">
+          <li>Cottmeyer Family Scholarship for $5000 (Apr 2023)</li>
           <li>ICPC Medalist (Feb 2023)</li>
           <li>Georgia Tech Hackathon Best Retro Hack Award Winner (Oct 2022)</li>
-          <li>Gartner Group Information Technology Scholarship (Apr 2022)</li>
-          <li>Cottmeyer Family Scholarship (Apr 2023)</li>
+          <li>Gartner Group Information Technology Scholarship for $1000 (Apr 2022)</li>
         </ul>
       </div>
 
@@ -60,6 +62,7 @@ const AboutMe: React.FC = () => {
       <a
   href="https://www.linkedin.com/in/benny-cortese/"
   target="_blank"
+  rel="noreferrer"
   className="group hover:bg-sky-600 relative bg-sky-700 rounded text-neutral-50 duration-500 font-bold flex justify-start gap-2 items-center p-2 pr-6"
   style={{ textDecoration: 'none' }}
 >
