@@ -3,12 +3,16 @@
 @tailwind utilities;
 
 .skill-icon {
-    width: 100px; /* or any size you prefer */
+    width: 80px; /* or any size you prefer */
     height: auto;
   }
 
   html, body {
     background-color: #FAF9F6; /* Use your chosen color */
     min-height: 100%;
+  }
+
+  .custom-min-height {
+    min-height: 50vh; /* 90% of the viewport height */
   }
   
