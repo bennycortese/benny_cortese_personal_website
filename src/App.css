@@ -53,4 +53,36 @@
     backdrop-filter: blur(4px);
   }
   
+
+  .github, .linkedin {
+    color: whitesmoke;
+  }
   
+  .github:hover {
+    background-color: #1a1e22;
+    
+  }
+  
+  .linkedin:hover {
+    background-color: #0a66c2;
+    
+  }
+
+  
+@keyframes bounce_613 {
+    40% {
+      transform: scale(1.4);
+    }
+  
+    60% {
+      transform: scale(0.8);
+    }
+  
+    80% {
+      transform: scale(1.2);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }

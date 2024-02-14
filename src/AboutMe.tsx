@@ -5,6 +5,8 @@ const AboutMe: React.FC = () => {
   return (
     <div className="bg-[#FAF9F6] flex flex-col items-center justify-center min-h-screen p-5">
       {/* Introduction Section */}
+
+      
       <div className="text-center">
         <h1 className="text-3xl font-bold">Hi, I am Benny Cortese!</h1>
         <p className="text-xl mt-2 mb-4">Incoming Software Engineer Intern at Figma, passionate about building awesome things with technology!</p>
