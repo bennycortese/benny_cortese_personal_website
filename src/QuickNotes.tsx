@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { createClient } from "@supabase/supabase-js";
 import './QuickNotes_output.css';
 
@@ -10,28 +10,15 @@ type Note = {
 };
 
 const QuickNotes: React.FC = () => {
-    const [notes, setNotes] = useState<Note[]>([]);
     const [key, setKey] = useState('');
     const [value, setValue] = useState('');
     const [retrieveKey, setRetrieveKey] = useState('');
     const [retrievedNote, setRetrievedNote] = useState<Note | null>(null);  
 
-  useEffect(() => {
-    getNotes();
-  }, []);
-
-  async function getNotes() {
-    const { data, error } = await supabase.from("benny_notes").select();
-    if (error) {
-      console.error("Error fetching notes", error);
-    } else {
-      setNotes(data || []);
-    }
-  }
 
   const handleInsertOrUpdate = async () => {
     // Step 1: Check if the note with the given key exists
-    const { data: existingNote, error: fetchError } = await supabase
+    const { data: existingNote } = await supabase
         .from('benny_notes')
         .select()
         .eq('id', key)
@@ -73,7 +60,6 @@ const QuickNotes: React.FC = () => {
     // Reset input fields and refresh notes list
     setKey('');
     setValue('');
-    getNotes();
   };
 
   const handleRetrieve = async () => {
