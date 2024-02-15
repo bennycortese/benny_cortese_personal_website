@@ -25,7 +25,7 @@ const Drawings: React.FC = () => {
 
   return (
     <div style={{ backgroundColor: '#FAF9F6' }} className="flex flex-col items-center justify-center min-h-screen">
-      <h1 className="text-2xl font-bold mb-4">Drawings and Doodles</h1>
+      <h1 className="text-3xl font-bold mb-4">Drawings and Doodles</h1>
       <img src={currentImage} alt="Selected Art" className="rounded-lg mb-4" />
       <div className="dropdown dropdown-right dropdown-end">
         <div tabIndex={0} role="button" className="btn m-1">
