@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import images from './art_index'; // Assuming this is correctly typed as shown earlier
-import './doodles_output.css';
+
 
 // Define a type for the keys in the images object for better type safety
 type ImageKey = keyof typeof images;
