@@ -26,5 +26,4 @@ yarn-debug.log*
 yarn-error.log*
 
 # output files
-/src/benny_art/*
-/src/assets/*
+
