@@ -29,13 +29,14 @@ const App: React.FC = () => {
 
 
           </div>
-          <div className="flex-none">
-            <ul className="menu menu-horizontal px-1">
-              <li><Link to="/purpose">Purpose</Link></li>
-              <li><Link to="/drawings">Drawings</Link></li> {/* Ensure URL is lowercase */}
-              <li><Link to="/quicknotes">Quick Notes</Link></li> {/* Ensure URL is lowercase */}
-            </ul>
-          </div>
+          
+            <li>
+  <Link to="/purpose" className="btn btn-ghost text-l px-2 py-1">Purpose</Link>
+</li>
+
+
+              <li><Link to="/drawings" className="btn btn-ghost text-l px-2 py-1">Drawings</Link></li> {/* Ensure URL is lowercase */}
+              <li><Link to="/quicknotes" className="btn btn-ghost text-l px-2 py-1">Quick Notes</Link></li> {/* Ensure URL is lowercase */}
         </div>
   
         {/* Define Routes */}
