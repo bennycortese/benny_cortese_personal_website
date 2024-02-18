@@ -8,13 +8,7 @@ import './doodles_output.css'
 type ImageKey = keyof typeof images;
 const trie = new Trie();
 
-const Drawings: React.FC = () => {
-  // Use the ImageKey type for useState to ensure the initial value is a valid key
-  const [currentImage, setCurrentImage] = useState<string>(images['blastoise']);
-  const [searchTerm, setSearchTerm] = useState<string>('');
-  const [filteredImages, setFilteredImages] = useState<ImageKey[]>([]);
-
-  const imageNames: ImageKey[] = [
+const imageNames: ImageKey[] = [
     'blastoise', // Ensure these match the keys in your images object exactly
     'bart_simpson',
     'gumball',
@@ -33,6 +27,12 @@ const Drawings: React.FC = () => {
     'green_elephant',
     'blue_elephant',
   ];
+
+const Drawings: React.FC = () => {
+  // Use the ImageKey type for useState to ensure the initial value is a valid key
+  const [currentImage, setCurrentImage] = useState<string>(images['blastoise']);
+  const [searchTerm, setSearchTerm] = useState<string>('');
+  const [filteredImages, setFilteredImages] = useState<ImageKey[]>([]);
 
   useEffect(() => {
     imageNames.forEach((name) => trie.insert(name.toLowerCase()));
