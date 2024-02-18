@@ -55,6 +55,34 @@ type TrieNodeChildren = {
       }
       return true;
     }
+
+    findAllWithPrefix(prefix: string): string[] {
+        let node = this.root;
+        let results: string[] = [];
+    
+        // Find the node where the prefix ends
+        for (let char of prefix) {
+          if (!node.children[char]) {
+            return results; // If prefix not found, return empty array
+          }
+          node = node.children[char];
+        }
+    
+        // Recursively find all words from the end of the prefix
+        this.dfs(node, prefix, results);
+        return results;
+      }
+    
+      // Helper method to perform DFS from a given node, appending words to results
+      private dfs(node: TrieNode, prefix: string, results: string[]) {
+        if (node.isEndOfWord) {
+          results.push(prefix);
+        }
+    
+        Object.keys(node.children).forEach((char) => {
+          this.dfs(node.children[char], prefix + char, results);
+        });
+    }
   }
   
   // Optional export
