@@ -69,7 +69,7 @@ const Drawings: React.FC = () => {
       />
       <div className="flex items-start">
     <img src={currentImage} alt="Selected Art" className="rounded-lg mb-4 mr-8 " />
-    <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 mr-8">
+    <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 mr-8 overflow-y-auto max-h-60" style={{ scrollbarWidth: 'thin' }}>
       <li key='Ten most relevant images based on search: '>
         <button>
             {'Ten most relevant images based on search: '.replace('_', ' ')}
@@ -80,10 +80,11 @@ const Drawings: React.FC = () => {
           <button onClick={() => handleImageChange(imageName)}>
             {imageName.replace('_', ' ')}
           </button>
-        </li>
+        </li>   
       ))}
     </ul>
-        </div>
+</div>
+
 
       </div>
   );
