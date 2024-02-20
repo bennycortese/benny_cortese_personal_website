@@ -13,6 +13,7 @@ const AboutMe: React.FC = () => {
         <h1 className="text-3xl font-bold mt-0">Hi, I am Benny Cortese!</h1>
         <p className="text-xl mt-2">Incoming Software Engineer Intern at Figma, passionate about building awesome things with technology!</p>
       </div>
+        
 
       {/* Professional Experience Section */}
       <div className="my-4">
@@ -65,6 +66,8 @@ const AboutMe: React.FC = () => {
       
       {/* End of Right section */}
     </div>
+
+        <div> button here </div>
 
 
       </div>
