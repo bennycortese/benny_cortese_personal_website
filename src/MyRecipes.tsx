@@ -11,9 +11,21 @@ const AboutMe: React.FC = () => {
 
       <div className="text-center">
         <h1 className="text-3xl font-bold mt-0">These are recipes I have accumulated over time:</h1>
-        <p className="text-xl mt-2">Incoming Software Engineer Intern at Figma, passionate about building awesome things with technology!</p>
       </div>
+      
+      <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 mr-8 overflow-y-auto max-h-60" style={{ scrollbarWidth: 'thin' }}>
+      <li key='Ten most relevant images based on search: '>
+        <button>
+            {'Ten most relevant images based on search: '.replace('_', ' ')}
+        </button>
+      </li>
 
+        <li key={"rah"}>
+          <button>
+            
+          </button>
+        </li>   
+    </ul>
 
       
     </div>
