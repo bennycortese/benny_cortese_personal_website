@@ -67,8 +67,6 @@ const AboutMe: React.FC = () => {
       {/* End of Right section */}
     </div>
 
-        <div> button here </div>
-
 
       </div>
     </div>
