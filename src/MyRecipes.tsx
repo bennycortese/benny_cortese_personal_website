@@ -1,40 +1,40 @@
-import React from 'react';
-import './aboutme_output.css';
+import React, { useState } from 'react';
+import axios from 'axios';
 
-const AboutMe: React.FC = () => {
+const RecipeSearch = () => {
+  const [query, setQuery] = useState('');
+  const [recipes, setRecipes] = useState([]);
+
+  const searchRecipes = async () => {
+    const apiKey = 'YOUR_API_KEY';
+    const apiUrl = `https://api.example.com/search?query=${query}&apiKey=${apiKey}`;
+    try {
+      const response = await axios.get(apiUrl);
+      setRecipes(response.data.results);
+    } catch (error) {
+      console.error('Error fetching recipes:', error);
+    }
+  };
+
   return (
-    <div className="bg-[#FAF9F6] flex flex-col items-center justify-center min-h-screen p-2 mb-0">
-      <div className="flex flex-row justify-between items-start w-full max-w-6xl mb-0">
-
-      {/* Left Column for my text*/}
-      <div className="flex flex-col w-3/4 pr-12 mb-0">
-
-      <div className="text-center">
-        <h1 className="text-3xl font-bold mt-0">These are recipes I have accumulated over time:</h1>
-      </div>
-      
-      <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 mr-8 overflow-y-auto max-h-60" style={{ scrollbarWidth: 'thin' }}>
-      <li key='Ten most relevant images based on search: '>
-        <button>
-            {'Ten most relevant images based on search: '.replace('_', ' ')}
-        </button>
-      </li>
-
-        <li key={"rah"}>
-          <button>
-            
-          </button>
-        </li>   
-    </ul>
-
-      
-    </div>
-
-
+    <div>
+      <input
+        type="text"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        placeholder="Search for recipes..."
+      />
+      <button onClick={searchRecipes}>Search</button>
+      <div>
+        {recipes.map((recipe) => (
+          <div key={recipe.id}>
+            <img src={recipe.image} alt={recipe.title} />
+            <p>{recipe.title}</p>
+          </div>
+        ))}
       </div>
     </div>
-    
   );
 };
 
-export default AboutMe;
+export default RecipeSearch;
