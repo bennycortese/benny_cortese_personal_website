@@ -5,6 +5,7 @@ import Drawings from './Drawings';
 import QuickNotes from './QuickNotes';
 import AboutMe from './AboutMe'
 import Purpose from './Purpose'
+import RecipeSearch from './MyRecipes';
 //import FrenchStory from '../need_backend/FrenchStories';
 
 const App: React.FC = () => {
@@ -37,6 +38,7 @@ const App: React.FC = () => {
 
               <li><Link to="/drawings" className="btn btn-ghost text-l px-2 py-1">Drawings</Link></li> {/* Ensure URL is lowercase */}
               <li><Link to="/quicknotes" className="btn btn-ghost text-l px-2 py-1">Quick Notes</Link></li> {/* Ensure URL is lowercase */}
+              <li><Link to="/recipes" className="btn btn-ghost text-l px-2 py-1">Recipes</Link></li> {/* Ensure URL is lowercase */}
         </div>
   
         {/* Define Routes */}
@@ -45,6 +47,7 @@ const App: React.FC = () => {
           <Route path="/purpose" element={<Purpose />} />
           <Route path="/drawings" element={<Drawings />} /> {/* Ensure URL is lowercase */}
           <Route path="/quicknotes" element={<QuickNotes />} /> 
+          <Route path="/recipes" element={<RecipeSearch />} /> 
         </Routes>
       </Router>
     );
