@@ -1,12 +1,29 @@
 import React from 'react';
-import axios from 'axios';
+import { createClient } from "@supabase/supabase-js";
+
+// Initialize Supabase client (replace 'your_supabase_url' and 'your_supabase_anon_key' with actual values)
+const supabaseUrl = 'your_supabase_url';
+const supabaseAnonKey = 'your_supabase_anon_key';
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 const RecipeSearch = () => {
   const searchRecipes = async () => {
-    const apiKey = 'YOUR_API_KEY';
-    // Hardcoded query for demonstration
     const query = 'chicken'; // Example hardcoded query
-    const apiUrl = `https://api.example.com/search?query=${query}&apiKey=${apiKey}`;
+    
+    try {
+      const { data, error } = await supabase
+        .from('recipes') // Assuming your table name is 'recipes'
+        .select('*') // Selects all columns
+        .ilike('name', `%${query}%`); // Assuming you're searching for recipes by name, and using case-insensitive 'like'
+      
+      if (error) {
+        throw error;
+      }
+      
+      console.log(data); // Log the data or update state to render in UI
+    } catch (error) {
+      console.error('Error searching recipes:', error.message);
+    }
   };
 
   return (
