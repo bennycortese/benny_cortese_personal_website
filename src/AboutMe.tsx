@@ -44,7 +44,7 @@ const AboutMe: React.FC = () => {
       {/* Education & Awards Section */}
       <div className="my-4">
         <h2 className="text-2xl font-bold text-center mb-2">Education & Awards</h2>
-        <p>Bachelor of Science in Computer Science and Mathematics, University of Florida (August 2020 - May 2024) - GPA: 3.97/4.0</p>
+        <p>Bachelor of Science in Computer Science and Mathematics from the University of Florida (August 2020 - May 2024) - GPA: 3.97/4.0</p>
         <ul className="list-disc pl-5">
           <li>Cottmeyer Family Scholarship for $5000 (Apr 2023)</li>
           <li>ICPC Medalist (Feb 2023)</li>
