@@ -8,7 +8,7 @@ import Purpose from './Purpose'
 import RecipeSearch from './MyRecipes';
 //import FrenchStory from '../need_backend/FrenchStories';
 
-const App: React.FC = () => {
+const App: React.FC = () => { // Why is this not the entrypoint? Fix this today
     return (
       <Router>
         <div className="navbar bg-blue-500 text-white">
