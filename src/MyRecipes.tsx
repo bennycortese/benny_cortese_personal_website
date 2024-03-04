@@ -1,10 +1,7 @@
 import React from 'react';
 import { createClient } from "@supabase/supabase-js";
 
-// Initialize Supabase client (replace 'your_supabase_url' and 'your_supabase_anon_key' with actual values)
-const supabaseUrl = 'your_supabase_url';
-const supabaseAnonKey = 'your_supabase_anon_key';
-const supabase = createClient(supabaseUrl, supabaseAnonKey);
+const supabase = createClient("https://czptjemnwhgrjdiykjzg.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN6cHRqZW1ud2hncmpkaXlranpnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDYwODAwNzYsImV4cCI6MjAyMTY1NjA3Nn0.De3wrVx-xxkSfLNBBnOWlhqr8UL2zZFMJmoUH06yGUc");
 
 const RecipeSearch = () => {
     const searchRecipes = async () => {
