@@ -5,7 +5,7 @@ import Drawings from './Drawings';
 import QuickNotes from './QuickNotes';
 import AboutMe from './AboutMe'
 import Purpose from './Purpose'
-//import RecipeSearch from './MyRecipes';
+import RecipeSearch from './MyRecipes';
 //import FrenchStory from '../need_backend/FrenchStories';
 
 const App: React.FC = () => { // Why is this not the entrypoint? Fix this today
@@ -47,6 +47,7 @@ const App: React.FC = () => { // Why is this not the entrypoint? Fix this today
           <Route path="/purpose" element={<Purpose />} />
           <Route path="/drawings" element={<Drawings />} /> {/* Ensure URL is lowercase */}
           <Route path="/quicknotes" element={<QuickNotes />} /> 
+          <Route path="/recipes" element={<RecipeSearch />} /> 
         </Routes>
       </Router>
     );
