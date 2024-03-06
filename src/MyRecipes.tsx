@@ -1,43 +1,59 @@
-import React from 'react';
-import { createClient } from "@supabase/supabase-js";
+import React, { useState } from 'react';
+import { createClient } from '@supabase/supabase-js';
 
-const supabase = createClient("https://czptjemnwhgrjdiykjzg.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN6cHRqZW1ud2hncmpkaXlranpnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDYwODAwNzYsImV4cCI6MjAyMTY1NjA3Nn0.De3wrVx-xxkSfLNBBnOWlhqr8UL2zZFMJmoUH06yGUc");
+const supabase = createClient('https://czptjemnwhgrjdiykjzg.supabase.co', 'your_anon_key');
 
 const RecipeSearch = () => {
+    const [query, setQuery] = useState('');
+    const [recipes, setRecipes] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
+
     const searchRecipes = async () => {
-        const query = 'chicken'; // Example hardcoded query
-        
+        setIsLoading(true);
         try {
           const { data, error } = await supabase
-            .from('recipes') // Assuming your table name is 'recipes'
-            .select('*') // Selects all columns
-            .ilike('name', `%${query}%`); // Assuming you're searching for recipes by name, and using case-insensitive 'like'
+            .from('recipes')
+            .select('*')
+            .ilike('name', `%${query}%`);
           
-          if (error) {
-            // Check if the error is an instance of Error and has a message
-            if (error instanceof Error) {
-              console.error('Error searching recipes:', error.message);
-              throw error;
-            } else {
-              // If it's not an instance of Error, handle or log it accordingly
-              console.error('Error searching recipes:', error);
-              throw new Error('An unknown error occurred');
-            }
-          }
+          if (error) throw error;
           
-          console.log(data); // Log the data or update state to render in UI
+          setRecipes(data);
         } catch (error) {
-          if (error instanceof Error) {
-            console.error('Error searching recipes:', error.message);
-          } else {
-            console.error('An unexpected error occurred');
-          }
+          console.error('Error searching recipes:', error.message);
+        } finally {
+          setIsLoading(false);
         }
       };
 
   return (
-    <div className="form-control">
-      <button className="btn btn-primary mt-2" onClick={searchRecipes}>Search Recipes</button>
+    <div>
+      <div className="form-control">
+        <input 
+          type="text" 
+          placeholder="Search for recipes..." 
+          className="input input-bordered w-full max-w-xs" 
+          value={query} 
+          onChange={(e) => setQuery(e.target.value)}
+        />
+        <button 
+          className={`btn btn-primary mt-2 ${isLoading ? 'loading' : ''}`}
+          onClick={searchRecipes}
+          disabled={isLoading}
+        >
+          Search Recipes
+        </button>
+      </div>
+      <div className="mt-4">
+        {recipes.map((recipe) => (
+          <div key={recipe.id} className="card w-96 bg-base-100 shadow-xl my-2">
+            <div className="card-body">
+              <h2 className="card-title">{recipe.name}</h2>
+              <p>{recipe.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
