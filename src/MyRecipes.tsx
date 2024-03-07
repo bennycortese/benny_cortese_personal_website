@@ -51,6 +51,10 @@ const RecipeSearch = () => {
               <h2 className="card-title">{recipe.name}</h2>
               <p>{recipe.description}</p>
             </div>
+            <div className="card-body">
+              <h2 className="card-title-2">{recipe.name}</h2>
+              <p>{recipe.description}</p>
+            </div>
           </div>
         ))}
       </div>
