@@ -17,7 +17,8 @@ const MyBlog: React.FC = () => {
   
         <div className="text-center">
           <h1 className="text-3xl font-bold mt-0">Hi, I am Benny Cortese!</h1>
-          <p className="text-xl mt-2">This is where I blog about things I've thought about.</p>
+                        <p className="text-xl mt-2">This is where I blog about things I've thought about.</p>
+                        <p className="text-xl mt-2">I need to settle on a blog template though</p>
         </div>
 
         </div>
