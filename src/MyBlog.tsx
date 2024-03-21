@@ -7,24 +7,58 @@ const supabaseAnonKey: string = 'your_anon_key';
 
 const supabase: SupabaseClient = createClient(supabaseUrl, supabaseAnonKey);
 
-const MyBlog: React.FC = () => {
-    return (
-      <div className="bg-[#FAF9F6] flex flex-col items-center justify-center min-h-screen p-2 mb-0">
-        <div className="flex flex-row justify-between items-start w-full max-w-6xl mb-0">
-  
-        {/* Left Column for my text*/}
-        <div className="flex flex-col w-3/4 pr-12 mb-0">
-  
-        <div className="text-center">
-          <h1 className="text-3xl font-bold mt-0">Hi, I am Benny Cortese!</h1>
-                        <p className="text-xl mt-2">This is where I blog about things I've thought about.</p>
-                        <p className="text-xl mt-2">I need to settle on a blog template though</p>
-        </div>
+interface Post {
+    id: number;
+    title: string;
+    content: string;
+    createdAt: string;
+}
 
+const MyBlog: React.FC = () => {
+    const [posts, setPosts] = useState<Post[]>([]);
+
+    const fetchPosts = async () => {
+        let { data: posts, error } = await supabase
+            .from('posts') // Assuming your table is named 'posts'
+            .select('*')
+            .order('createdAt', { ascending: false });
+
+        if (!error && posts) {
+            setPosts(posts);
+        } else {
+            console.error('Error fetching posts:', error);
+        }
+    };
+
+    useEffect(() => {
+        fetchPosts();
+    }, []);
+
+    return (
+        <div className="bg-[#FAF9F6] min-h-screen p-4">
+            <div className="max-w-6xl mx-auto">
+                <header className="text-center mb-12">
+                    <h1 className="text-3xl font-bold">Hi, I am Benny Cortese!</h1>
+                    <p className="text-xl mt-2">This is where I blog about things I've thought about.</p>
+                    <p className="text-xl mt-2">I need to settle on a blog template though</p>
+                </header>
+
+                <main>
+                    {posts.length > 0 ? (
+                        posts.map((post) => (
+                            <article key={post.id} className="mb-8">
+                                <h2 className="text-2xl font-semibold">{post.title}</h2>
+                                <p className="text-gray-700 mt-2">{post.content}</p>
+                                <p className="text-gray-500 text-sm">Published on: {new Date(post.createdAt).toLocaleDateString()}</p>
+                            </article>
+                        ))
+                    ) : (
+                        <p>No posts found.</p>
+                    )}
+                </main>
+            </div>
         </div>
-        </div>
-        </div>
-    )
+    );
 }
 
 export default MyBlog;
