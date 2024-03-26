@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 
-
-const supabaseUrl: string = 'https://czptjemnwhgrjdiykjzg.supabase.co';
-const supabaseAnonKey: string = 'your_anon_key';
-
+const supabaseUrl = 'https://czptjemnwhgrjdiykjzg.supabase.co';
+const supabaseAnonKey = 'your_anon_key';
 const supabase: SupabaseClient = createClient(supabaseUrl, supabaseAnonKey);
 
 interface Post {
@@ -35,25 +33,33 @@ const MyBlog: React.FC = () => {
     }, []);
 
     return (
-        <div className="bg-[#FAF9F6] min-h-screen p-4">
-            <div className="max-w-6xl mx-auto">
-                <header className="text-center mb-12">
-                    <h1 className="text-3xl font-bold">Hi, I am Benny Cortese!</h1>
-                    <p className="text-xl mt-2">This is where I blog about things I've thought about.</p>
-                    <p className="text-xl mt-2">I need to settle on a blog template though</p>
+        <div className="bg-base-200 min-h-screen p-4">
+            <div className="container mx-auto">
+                <header className="text-center my-12">
+                    <h1 className="text-4xl font-bold">Hi, I am Benny Cortese!</h1>
+                    <p className="text-xl mt-4">This is where I blog about things I've thought about.</p>
+                    <p className="mt-2">I need to settle on a blog template though.</p>
                 </header>
 
                 <main>
                     {posts.length > 0 ? (
                         posts.map((post) => (
-                            <article key={post.id} className="mb-8">
-                                <h2 className="text-2xl font-semibold">{post.title}</h2>
-                                <p className="text-gray-700 mt-2">{post.content}</p>
-                                <p className="text-gray-500 text-sm">Published on: {new Date(post.createdAt).toLocaleDateString()}</p>
-                            </article>
+                            <div key={post.id} className="card bg-base-100 shadow-xl mb-6">
+                                <div className="card-body">
+                                    <h2 className="card-title">{post.title}</h2>
+                                    <p>{post.content}</p>
+                                    <div className="card-actions justify-end">
+                                        <p className="text-sm">Published on: {new Date(post.createdAt).toLocaleDateString()}</p>
+                                    </div>
+                                </div>
+                            </div>
                         ))
                     ) : (
-                        <p>No posts found.</p>
+                        <div className="alert alert-warning">
+                            <div className="flex-1">
+                                <label>No posts found.</label>
+                            </div>
+                        </div>
                     )}
                 </main>
             </div>
