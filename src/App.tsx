@@ -38,7 +38,6 @@ const App: React.FC = () => { // Why is this not the entrypoint? Fix this today
 
               <li><Link to="/drawings" className="btn btn-ghost text-l px-2 py-1">Drawings</Link></li> {/* Ensure URL is lowercase */}
               <li><Link to="/quicknotes" className="btn btn-ghost text-l px-2 py-1">Quick Notes</Link></li> {/* Ensure URL is lowercase */}
-              {/* <li><Link to="/recipes" className="btn btn-ghost text-l px-2 py-1">Recipes</Link></li> {/* Ensure URL is lowercase */} */ }
         </div>
   
         {/* Define Routes */}
