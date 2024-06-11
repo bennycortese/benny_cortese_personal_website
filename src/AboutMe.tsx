@@ -23,7 +23,7 @@ const AboutMe: React.FC = () => {
           <li>Software Engineering Intern at Figma (May 2024 - August 2024)</li>
           <li>Neo Scholar Finalist (Jul 2023 - Present)</li>
           <li>Software Engineer Intern at Microsoft working on Kubernetes related projects (May 2023 - Aug 2023 and May 2022 - Aug 2022)</li>
-          <li>Teaching Assistant at UF for Data Structures, OS, Discrete Structures, and Programming Language Concepts (Aug 2021 - Present)</li>
+          <li>Teaching Assistant at UF for Data Structures, OS, Discrete Structures, and Programming Language Concepts (Aug 2021 - May 2024)</li>
         </ul>
       </div>
 
@@ -47,8 +47,9 @@ const AboutMe: React.FC = () => {
         <h2 className="text-2xl font-bold text-center mb-2">Education & Awards</h2>
         <p>Bachelor of Science in Computer Science and Mathematics from the University of Florida (August 2020 - May 2024) - GPA: 3.97/4.0</p>
         <ul className="list-disc pl-5">
+          <li>ICPC Gold Medalist (Feb 2024)</li>
           <li>Cottmeyer Family Scholarship for $5000 (Apr 2023)</li>
-          <li>ICPC Medalist (Feb 2023)</li>
+          <li>ICPC Bronze Medalist (Feb 2023)</li>
           <li>Georgia Tech Hackathon Best Retro Hack Award Winner (Oct 2022)</li>
           <li>Gartner Group Information Technology Scholarship for $1000 (Apr 2022)</li>
         </ul>
