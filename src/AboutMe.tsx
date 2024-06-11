@@ -11,7 +11,7 @@ const AboutMe: React.FC = () => {
 
       <div className="text-center">
         <h1 className="text-3xl font-bold mt-0">Hi, I am Benny Cortese!</h1>
-        <p className="text-xl mt-2">Incoming Software Engineer Intern at Figma, passionate about building awesome things with technology!</p>
+        <p className="text-xl mt-2">Software Engineer Intern at Figma, passionate about building awesome things with technology!</p>
       </div>
         
 
@@ -19,6 +19,7 @@ const AboutMe: React.FC = () => {
       <div className="my-4">
         <h2 className="text-2xl font-bold text-center mb-2">Professional Experience</h2>
         <ul className="list-disc pl-5">
+          <li>Kleiner Perkins Engineering Fellow (May 2024 - Present)</li>
           <li>Software Engineering Intern at Figma (May 2024 - August 2024)</li>
           <li>Neo Scholar Finalist (Jul 2023 - Present)</li>
           <li>Software Engineer Intern at Microsoft working on Kubernetes related projects (May 2023 - Aug 2023 and May 2022 - Aug 2022)</li>
