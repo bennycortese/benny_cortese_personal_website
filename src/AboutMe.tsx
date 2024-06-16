@@ -58,7 +58,7 @@ const AboutMe: React.FC = () => {
         {/* End of left text section */}
       </div>
 
-    {/* Start of Right section */}
+    {/* Start of image section */}
     <div className="flex justify-end  pl-12">
       <div className="card card-bordered shadow-xl bg-[#FAF9F6]">
         <figure className="bg-[#FAF9F6] p-4">
