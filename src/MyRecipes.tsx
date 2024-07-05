@@ -7,6 +7,7 @@ interface Recipe {
     name: string;
     description: string;
 }
+// I need a way to add recipes, but only for me to add
 
 const supabaseUrl: string = 'https://czptjemnwhgrjdiykjzg.supabase.co';
 const supabaseAnonKey: string = 'your_anon_key';
