@@ -9,7 +9,7 @@ const Purpose: React.FC = () => {
         <div className="flex flex-col w-full px-4 mb-0 text-center"> {/* Adjusted to full width and added padding for centering */}
           <h1 className="text-3xl font-bold p-2 mt-8">Welcome to my website!</h1>
           <p className="text-xl mt-2">
-            Hi there! I'm Benny Cortese, a software engineer with a love of this world. This website is a place where I share my experimental works and talk about who I am professionally. Look around to see who I am and what I have been up to, and thanks for popping by!
+            Hi there! I'm Benny Cortese, a software engineer with a love of this world. This website is a place where I share my experimental works and talk about who I am. Look around to see who I am and what I have been up to, and thank you for popping by!
           </p>
           <div className="mt-8">
         <h2 className="text-2xl font-bold text-center mb-2">Why I do what I do</h2>
