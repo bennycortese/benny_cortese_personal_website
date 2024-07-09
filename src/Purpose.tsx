@@ -16,7 +16,7 @@ const Purpose: React.FC = () => {
         <ul className="list-style-type: disc; padding-left: 20px;">
     <li className="text-xl margin-bottom: 10px; mb-2">I want to revolutionize the field of education with technology.</li>
     <li className="text-xl margin-bottom: 10px; mb-2">With increasing advances in machine learning like the LLM, generative testing models can understand what students know and adapt to them.</li>
-    <li className="text-xl margin-bottom: 10px; mb-2"> I believe in a future where every student has their learning experience tuned towards their needs. </li>
+    <li className="text-xl margin-bottom: 10px; mb-2"> I believe in a future where every student has their learning experience tuned towards their own needs. </li>
     <li className="text-xl"> I am working towards that future through learning and developing software and machine learning models. </li>
     </ul>
     <div className="flex justify-center items-center"> {/* Example for full viewport centering */}
