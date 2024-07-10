@@ -4,7 +4,7 @@ import { createClient, SupabaseClient } from '@supabase/supabase-js';
 const supabaseUrl = 'https://czptjemnwhgrjdiykjzg.supabase.co';
 const supabaseAnonKey = 'your_anon_key';
 const supabase: SupabaseClient = createClient(supabaseUrl, supabaseAnonKey);
-
+// where should I put this entrypoint?
 interface Post {
     id: number;
     title: string;
