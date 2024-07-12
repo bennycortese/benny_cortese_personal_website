@@ -15,7 +15,7 @@ const AboutMe: React.FC = () => {
       </div>
         
 
-      {/* Professional Experience Section -- maybe add images */}
+      {/* Professional Experience Section -- definitely add images */}
       <div className="my-4">
         <h2 className="text-2xl font-bold text-center mb-2">Professional Experience</h2>
         <ul className="list-disc pl-5">
