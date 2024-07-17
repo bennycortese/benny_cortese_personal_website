@@ -39,6 +39,7 @@ const MyBlog: React.FC = () => {
                     <h1 className="text-4xl font-bold">Hi, I am Benny Cortese!</h1>
                     <p className="text-xl mt-4">This is where I blog about things I've thought about.</p>
                      <p className="text-xl mt-4">I think I want little subsections here, similar to the format that one YC guy has. I want to write about JS/React/Docker/K8s</p>
+                     <p className="text-xl mt-4">Like for example - I want to write about how JS const is a scam - you can still mutate all the internal attributes</p>
                     <p className="mt-2">I need to settle on a blog template though. I also need a better way to insert my little posts. Maybe a script which puts things in the blog somehow? The issue is that it can't be accessible from this page but it should be easy to access for me if it's going into a database which adds a layer of abstraction. Need to look into this/see if it's worth building something out myself. Also got into UPenn today which was rad! I feel pretty good about that :)</p>
                 </header>
 
