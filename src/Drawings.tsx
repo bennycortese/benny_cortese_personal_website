@@ -33,7 +33,7 @@ const Drawings: React.FC = () => {
   const [currentImage, setCurrentImage] = useState<string>(images['blastoise']);
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [filteredImages, setFilteredImages] = useState<ImageKey[]>([]);
-
+// I want to have categories of some kind here. I also wanna add more of the art I'm proud of here, I really like this part of the site 
   useEffect(() => {
     imageNames.forEach((name) => trie.insert(name.toLowerCase()));
     setFilteredImages(imageNames.slice(0, 10));
