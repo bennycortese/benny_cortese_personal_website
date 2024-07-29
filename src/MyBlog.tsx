@@ -46,7 +46,7 @@ const MyBlog: React.FC = () => {
                 <p className="text-xl mt-4">I want to write about life. I know it's cliche, but I think it would be fun. I also really want to write about Jotai Atoms, I love using it.</p>
                 <p className="text-xl mt-4">I want to plan out my days better. It can't be as monotonous as it is currently. I need to do improve or dance or run around and play sports or climb or sing or just be. I want to draw and color and breath and pick flowers and see the seaside and truely be human. I want to feel alive. I feel so close to that point - so close to that state of self-actualization without truely reaching it. I need to keep maintaining sleep and find time for myself. I need to love the weekends and sing in the rain. I need to have rain again. I need to be able to meet people and date and love and read. I want to truely be free - to play the piano and be unbound by the things grounding me down too much. I need to fix DaisyUI so I can update this site lol. I just need to BE, I want to act and do monologues like 'red'. I want to obsess over things unrelated to tech. Don't get me wrong, tech is great - but that can't be all it ever is because there's so much more. I need more. I know I deserve more and can get more. I need to get it. </p>
                 <p>yo skydive again dawg</p>
-                <p>more boardgames</p>
+                <p>more boardgames - also react is just kinda interesting when you combine it with other things? like only react is boring, react + backend + ml is kinda dope</p>
                 <main>
                     {posts.length > 0 ? (
                         posts.map((post) => (
