@@ -20,7 +20,7 @@ const AboutMe: React.FC = () => {
         <h2 className="text-2xl font-bold text-center mb-2">Professional Experience</h2>
         <ul className="list-disc pl-5">
           <li>Kleiner Perkins Engineering Fellow (May 2024 - Present)</li>
-          <li>Software Engineering Intern at Figma on Figjam AI team (May 2024 - August 2024)</li>
+          <li>Software Engineering Intern at Figma on Figjam AI and AI Productivity teams (May 2024 - August 2024)</li>
           <li>Neo Scholar Finalist (Jul 2023 - Present)</li>
           <li>Software Engineer Intern at Microsoft working on Kubernetes projects (May 2023 - Aug 2023, May 2022 - Aug 2022)</li>
           <li>Teaching Assistant at UF for Data Structures, OS, Discrete Structures, and Programming Language Concepts (Aug 2021 - May 2024)</li>
