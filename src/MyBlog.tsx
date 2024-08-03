@@ -50,6 +50,7 @@ const MyBlog: React.FC = () => {
                 <p>I feel like... I lost something at some point? some part of my humanity? I'm just tired and running ragged. I want hobbies back. I want free time back. I want my freedom back</p>
                 <p>bro fish is so good. angler was so good. my roomies and deniz are so good. the figma interns are so good. figma is so good. life is so good. everything is fantastic, this summer was peak</p>
                 <p>Sleep is so good</p>
+                <p>Werewolf is so fun ngl</p>
                 <main>
                     {posts.length > 0 ? (
                         posts.map((post) => (
