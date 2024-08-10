@@ -51,6 +51,7 @@ const MyBlog: React.FC = () => {
                 <p>bro fish is so good. angler was so good. my roomies and deniz are so good. the figma interns are so good. figma is so good. life is so good. everything is fantastic, this summer was peak</p>
                 <p>Sleep is so good</p>
                 <p>Werewolf is so fun ngl</p>
+                <p>The internship has ended and I am sad :( - it was such an incredible summer</p>
                 <main>
                     {posts.length > 0 ? (
                         posts.map((post) => (
