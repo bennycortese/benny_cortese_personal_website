@@ -27,8 +27,8 @@ const AboutMe: React.FC = () => {
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Y_Combinator_logo.svg/1200px-Y_Combinator_logo.svg.png" alt="YCombinator" className="mx-auto w-32 h-32"/>
         </div>
         <ul className="list-disc pl-5">
-          <li> Software Engineer at Meta on the Profile Infrastructure team doing full-stack development (May 2025 - Present)</li>
-          <li> Founding Engineer at Momentic, 2nd Engineer hired, YC S24 (January 2025 - April 2025)</li>
+          <li>Software Engineer at Meta on the Profile Infrastructure team doing full-stack development (May 2025 - Present)</li>
+          <li>Founding Engineer at Momentic, 2nd Engineer hired, YC S24 (January 2025 - April 2025)</li>
           <li>Kleiner Perkins Engineering Fellow (May 2024 - Present)</li>
           <li>Software Engineering Intern at Figma on Figjam AI and AI Productivity teams (May 2024 - August 2024)</li>
           <li>Neo Scholar Finalist (Jul 2023 - Present)</li>
