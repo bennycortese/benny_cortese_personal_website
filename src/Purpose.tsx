@@ -18,7 +18,7 @@ const Purpose: React.FC = () => {
     <li className="text-xl margin-bottom: 10px; mb-2"> I love building products that feel intuitive and pleasant to a user.</li>
     <li className="text-xl margin-bottom: 10px; mb-2"> I love learning about prompt engineering techniques, how to build agentic workflows, and the utilities of vector search.</li>
     <li className="text-xl"> I love learning about how to architect and improve better systems, and then apply that knowledge to build something truely great. </li>
-    <li className="text-xl"> I love learning about how to architect and improve better systems, and then apply that knowledge to build something truely great. </li>
+    <li className="text-xl"> I do what I do because I love what I do. </li>
     </ul>
     <div className="flex justify-center items-center"> {/* Example for full viewport centering */}
         <img src={"./assets/lightbulb_logo.png"} alt="Logo" className="h-96" />
