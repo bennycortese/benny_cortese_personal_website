@@ -10,3 +10,7 @@ In the project directory, you can run:
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) 
+
+### Note
+
+This project was made before I knew React so please forgive the parts that are a little strange, thanks!
