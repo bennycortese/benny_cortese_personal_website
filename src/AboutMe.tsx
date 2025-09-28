@@ -19,14 +19,24 @@ const AboutMe: React.FC = () => {
       <div className="my-4">
         <h2 className="text-2xl font-bold text-center mb-2">Professional Experience</h2>
         <div className="grid grid-cols-3 gap-4 mb-2">
+        <div className="flex justify-center items-center h-40">
           <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" className="mx-auto w-32 h-32"/>
+          </div>
+          <div className="flex justify-center items-center h-40">
           <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma" className="mx-auto w-32 h-32"/>
-          <img src="https://media.licdn.com/dms/image/v2/D560BAQGMuyaxxew9AA/company-logo_200_200/company-logo_200_200/0/1727939535273/momentic_ai_logo?e=1755734400&v=beta&t=HV0LcEFsdp5u1z2vWA2me2lJrfP3jh2Wop9QNceq3lY" alt="Momentic" className="mx-auto w-32 h-32"/>
+          </div>
+          <div className="flex justify-center items-center h-40">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Y_Combinator_logo.svg/1200px-Y_Combinator_logo.svg.png" alt="YCombinator" className="mx-auto w-32 h-32"/>          
+          </div>
+          <div className="flex justify-center items-center h-40">
           <img src="https://media.licdn.com/dms/image/v2/C560BAQHpvZB-7BigTg/company-logo_200_200/company-logo_200_200/0/1631417945298/kpcb_fellows_program_logo?e=2147483647&v=beta&t=WIidrVVYmmk5NQFNJrWgvEDRHlZJEnP_d4B4cW9DwZQ" alt="KP fellow" className="mx-auto w-32 h-32"/>
+          </div>
+          <div className="flex justify-center items-center h-40">
           <img src="https://71c9fe9609ea9fda6ebde82a25572d56.cdn.bubble.io/f1684537324536x152594041337064120/neo.svg" alt="Neo" className="mx-auto w-32 h-32"/>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Y_Combinator_logo.svg/1200px-Y_Combinator_logo.svg.png" alt="YCombinator" className="mx-auto w-32 h-32"/>
-          <div className="mx-auto w-32 h-32"/>
-          <img src="https://companieslogo.com/img/orig/META-4767da84.png?t=1720244492" alt="Meta" className="mx-auto w-36 h-24"/>
+          </div>
+          <div className="flex justify-center items-center h-40">
+          <img src="https://companieslogo.com/img/orig/META-4767da84.png?t=1720244492" alt="Meta" className="mt-4 mx-auto w-32 h-24"/>
+          </div>
         </div>
         <ul className="list-disc pl-5">
           <li>Software Engineer at Meta on the Profile Infrastructure team doing full-stack development (May 2025 - Present)</li>
