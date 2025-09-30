@@ -3,10 +3,9 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App_output.css';
 import Drawings from './Drawings';
 import QuickNotes from './QuickNotes';
-import AboutMe from './AboutMe'
-import Purpose from './Purpose'
-//import RecipeSearch from './MyRecipes';
-//import FrenchStory from '../need_backend/FrenchStories';
+import AboutMe from './AboutMe';
+import Purpose from './Purpose';
+import Portfolio from './Porfolio';
 
 const App: React.FC = () => { // Why is this not the entrypoint? Fix this today --- I think i fixed this
     return (
@@ -30,7 +29,9 @@ const App: React.FC = () => { // Why is this not the entrypoint? Fix this today 
 
 
           </div>
-          
+          <li>
+  <Link to="/portfolio" className="btn btn-ghost text-l px-2 py-1">Portfolio</Link>
+</li>
             <li>
   <Link to="/purpose" className="btn btn-ghost text-l px-2 py-1">Purpose</Link>
 </li>
@@ -43,6 +44,7 @@ const App: React.FC = () => { // Why is this not the entrypoint? Fix this today 
         <Routes>
           <Route path="/" element={<AboutMe />} />
           <Route path="/purpose" element={<Purpose />} />
+          <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/drawings" element={<Drawings />} /> {/* Ensure URL is lowercase */}
           <Route path="/quicknotes" element={<QuickNotes />} /> 
           {/*<Route path="/recipes" element={<RecipeSearch />} /> */}
