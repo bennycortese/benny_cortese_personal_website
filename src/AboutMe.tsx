@@ -42,7 +42,7 @@ const AboutMe: React.FC = () => {
           <li>Software Engineer at Meta on the Profile Infrastructure team doing full-stack development (May 2025 - Present)</li>
           <li>Founding Engineer at Momentic, 2nd Engineer hired, YC S24 (January 2025 - April 2025)</li>
           <li>Kleiner Perkins Engineering Fellow (May 2024 - Present)</li>
-          <li>Software Engineering Intern at Figma on Figjam AI and AI Productivity teams (May 2024 - August 2024)</li>
+          <li>Software Engineering Intern at Figma on the Figjam AI and AI Productivity teams (May 2024 - August 2024)</li>
           <li>Neo Scholar Finalist (Jul 2023 - Present)</li>
           <li>Software Engineer Intern at Microsoft working on Kubernetes projects (May 2023 - Aug 2023, May 2022 - Aug 2022)</li>
           <li>Teaching Assistant at UF for Data Structures, OS, Discrete Structures, and Programming Language Concepts (Aug 2021 - May 2024)</li>
